@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AnomalyConfig", menuName = "CONFIGURATIONS/Anomalies/AnomalyConfig", order = 0)]
 public class AnomalyConfig : ScriptableObject
 {
-    [field: SerializeField] public MonoScript anomaly { get; private set; }
+    [field: SerializeField] public MonoScript Anomaly { get; private set; }
     [field: SerializeField] public string LocalizationKey { get; private set; }
 
     // public Type GetAnomalyType()

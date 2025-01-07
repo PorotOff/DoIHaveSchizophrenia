@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class AnomalyFixing : MonoBehaviour
@@ -14,7 +15,7 @@ public class AnomalyFixing : MonoBehaviour
     private void Fix()
     {
         AnomalyConfig anomalyConfig = AnomalyReportData.GetAnomaly();
-        // IAnomaly anomaly = anomalyConfig.GetAnomalyType();
+
 
         // anomaly.Fix();
     }

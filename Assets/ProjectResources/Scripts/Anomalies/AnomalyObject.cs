@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class AnomalyObject : MonoBehaviour
 {
@@ -26,6 +27,9 @@ public class AnomalyObject : MonoBehaviour
     {
         foreach (var anomalyConfig in anomalyObjectConfig.Anomalies)
         {
+            Type anomalyType = anomalyConfig.Anomaly.GetClass();
+            gameObject.AddComponent(anomalyType);
+
             // IAnomaly anomaly = anomalyConfig.GetAnomalyType();
             // gameObject.AddComponent(anomaly.GetType());
         }
