@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_GUID: 3228ba65f1a94284bb50488608c84e42
+  m_SerializeEntries:
+  - m_GUID: 1c3f112f0be74364eb99334d747a1c04
+    m_Address: Assets/GameResources/Localization/Levels/RoomNames/RoomNames Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 233a5d8e81033e14aaf40acb313d1d22
+    m_Address: Assets/GameResources/Localization/Game/ReportWindow/ReportWindow Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d051107e3f620c44b810a9669f8e29f
+    m_Address: Assets/GameResources/Localization/MainMenu/MainMenu Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e3583432562b8449b12f66f0e5cad86
+    m_Address: Assets/GameResources/Localization/MainMenu/Settings/SettingsTabButtons/SettingsTabButtons
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f242b370de2dec4facafa23538cab21
+    m_Address: Assets/GameResources/Localization/Levels/LevelNames Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9421c1735f24afb41ad842bad99c2ab4
+    m_Address: Assets/GameResources/Localization/Levels/AnomalyObjects/PrototypeLevelAnomalyObjects
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ba96c9e0f3fb3f9408dd24a4ce5fc4e3
+    m_Address: Assets/GameResources/Localization/Levels/AnomalyTypes/AnomalyTypes
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9c4c458432d05f4ba4cfb139776bba6
+    m_Address: Assets/GameResources/Localization/Levels/AnomalyLocations/AnomalyLocations
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: d1a235cd51240f44983579ab8ac2c9a0, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: cad3d8c09a9915b468840178d7085a5f, type: 2}
+    - {fileID: 11400000, guid: 425865ffcb98aa941a0dfd2724d54fd0, type: 2}
