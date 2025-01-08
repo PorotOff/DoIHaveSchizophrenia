@@ -1,46 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AnomalyManager : MonoBehaviour
 {
-    private Transform roomsContainer;
-    private List<Transform> rooms = new List<Transform>();
+    private AnomalyRoomsContainer anomalyRoomsContainer;
+    private OccuredAnomaliesContainer occuredAnomaliesContainer;
 
     [SerializeField] private float minAnomalyTimeSpan;
     [SerializeField] private float maxAnomalyTimeSpan;
     private Coroutine anomalyTimer;
 
-    private void Awake()
+    public void Initialize(AnomalyRoomsContainer anomalyRoomsContainer, OccuredAnomaliesContainer occuredAnomaliesContainer)
     {
-        roomsContainer = GetComponent<Transform>();
-
-        FindAllAnomalyRooms();
+        this.anomalyRoomsContainer = anomalyRoomsContainer;
+        this.occuredAnomaliesContainer = occuredAnomaliesContainer;
     }
 
-    private void Start()
+    public void StartUp()
     {
         anomalyTimer = StartCoroutine(AnomalyTimer());
     }
 
-    private void FindAllAnomalyRooms()
-    {
-        for (int i = 0; i < roomsContainer.childCount; i++)
-        {
-            rooms.Add(roomsContainer.GetChild(i));
-        }
-    }
-
     private void RandomAnomalyOccur()
     {
-        Transform randomRoom = rooms[Random.Range(0, rooms.Count)];
+        AnomalyRoom randomAnomalyRoom = anomalyRoomsContainer.anomalyRooms[Random.Range(0, anomalyRoomsContainer.anomalyRooms.Count)];
+        
+        AnomalyObject randomAnomalyObject = randomAnomalyRoom.AnomalyObjects[Random.Range(0, randomAnomalyRoom.AnomalyObjects.Count)];
+        if (randomAnomalyObject == null) throw new System.Exception($"В комнате {randomAnomalyRoom.name} закончились аномальные объекты");
 
-        IAnomaly[] anomalies = randomRoom.GetComponentsInChildren<IAnomaly>();
+        List<IAnomaly> anomalies = randomAnomalyObject.GetComponents<IAnomaly>().ToList();
+        if (anomalies.Count == 0) throw new System.Exception($"На объекте {randomAnomalyObject.name} в комнате {randomAnomalyRoom.name} нет аномалий");
 
-        if (anomalies.Length == 0) throw new System.Exception($"В комнате {randomRoom.name} закончились аномальные объекты");
-
-        IAnomaly randomAnomaly = anomalies[Random.Range(0, anomalies.Length)];
+        IAnomaly randomAnomaly = anomalies[Random.Range(0, anomalies.Count)];
+        
         randomAnomaly.Occur();
+
+        OccuredAnomalyData newOccuredAnomaly = new OccuredAnomalyData(randomAnomalyObject, randomAnomaly);
+        occuredAnomaliesContainer.AddOcuredAnomaly(newOccuredAnomaly);
     }
 
     private IEnumerator AnomalyTimer()

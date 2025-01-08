@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d515ebec729afda498f43876328d003d, type: 3}
   m_Name: TurningOfLight
   m_EditorClassIdentifier: 
-  <anomaly>k__BackingField: {fileID: 11500000, guid: e0d88dfc0b547cd4aaac575afcc97d1d, type: 3}
+  <Anomaly>k__BackingField: {fileID: 11500000, guid: e0d88dfc0b547cd4aaac575afcc97d1d, type: 3}
   <LocalizationKey>k__BackingField: TurningOfLight

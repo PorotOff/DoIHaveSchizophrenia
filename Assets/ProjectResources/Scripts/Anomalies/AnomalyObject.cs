@@ -27,11 +27,8 @@ public class AnomalyObject : MonoBehaviour
     {
         foreach (var anomalyConfig in anomalyObjectConfig.Anomalies)
         {
-            Type anomalyType = anomalyConfig.Anomaly.GetClass();
+            Type anomalyType = anomalyConfig.GetAnomalyType();
             gameObject.AddComponent(anomalyType);
-
-            // IAnomaly anomaly = anomalyConfig.GetAnomalyType();
-            // gameObject.AddComponent(anomaly.GetType());
         }
     }
 }

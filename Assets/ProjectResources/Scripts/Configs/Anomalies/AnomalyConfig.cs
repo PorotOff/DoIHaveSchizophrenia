@@ -8,14 +8,14 @@ public class AnomalyConfig : ScriptableObject
     [field: SerializeField] public MonoScript Anomaly { get; private set; }
     [field: SerializeField] public string LocalizationKey { get; private set; }
 
-    // public Type GetAnomalyType()
-    // {
-    //     Type anomalyType = anomaly.GetClass();
+    public Type GetAnomalyType()
+    {
+        Type anomalyType = Anomaly.GetClass();
 
-    //     if (anomalyType == null) throw new Exception("anomalyType не содержит валидного класса");
-    //     if (!typeof(IAnomaly).IsAssignableFrom(anomalyType)) throw new Exception("anomalyType не имплементирует IAnomaly");
-    //     if (!typeof(MonoBehaviour).IsAssignableFrom(anomalyType)) throw new Exception("anomalyType не наследуется от MonoBehaviour");
+        if (anomalyType == null) throw new Exception("anomalyType не содержит валидного класса");
+        if (!typeof(IAnomaly).IsAssignableFrom(anomalyType)) throw new Exception("anomalyType не имплементирует IAnomaly");
+        if (!typeof(MonoBehaviour).IsAssignableFrom(anomalyType)) throw new Exception("anomalyType не наследуется от MonoBehaviour");
 
-    //     return anomalyType;
-    // }
+        return anomalyType;
+    }
 }

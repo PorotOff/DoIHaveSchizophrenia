@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d515ebec729afda498f43876328d003d, type: 3}
   m_Name: ObjectDisappearance
   m_EditorClassIdentifier: 
-  <anomaly>k__BackingField: {fileID: 11500000, guid: cec9f6e25739baf4498a579397c05e8d, type: 3}
+  <Anomaly>k__BackingField: {fileID: 11500000, guid: cec9f6e25739baf4498a579397c05e8d, type: 3}
   <LocalizationKey>k__BackingField: ObjectDisappearance

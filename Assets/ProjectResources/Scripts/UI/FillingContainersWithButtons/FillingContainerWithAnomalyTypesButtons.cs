@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.Localization;
 
 public class FillingContainerWithAnomalyTypesButtons : FillingContainerWithButtons
@@ -34,7 +33,7 @@ public class FillingContainerWithAnomalyTypesButtons : FillingContainerWithButto
     {        
         var anomalyConfig = item as AnomalyConfig;
 
-        AnomalyReportData.SetAnomalyType(anomalyConfig);
+        // AnomalyReportData.SetAnomalyType(anomalyConfig);
 
         anomalyObjectsButtonsFiller.Initialise(anomalyRoom);
         anomalyObjectsButtonsFiller.FillWithLocalizedButtons();

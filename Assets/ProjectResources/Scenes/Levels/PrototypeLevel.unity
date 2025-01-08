@@ -6089,6 +6089,7 @@ GameObject:
   - component: {fileID: 836638610}
   - component: {fileID: 836638609}
   - component: {fileID: 836638608}
+  - component: {fileID: 836638611}
   m_Layer: 0
   m_Name: SendReportMessageButton
   m_TagString: Untagged
@@ -6198,6 +6199,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836638606}
   m_CullTransparentMesh: 1
+--- !u!114 &836638611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836638606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: babdfba381c31b346b5e12a2760bcf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &869661465
 GameObject:
   m_ObjectHideFlags: 0

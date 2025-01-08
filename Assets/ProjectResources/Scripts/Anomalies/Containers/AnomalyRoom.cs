@@ -1,15 +1,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Unity.VisualScripting;
 
 public class AnomalyRoom : MonoBehaviour
 {
     [field: SerializeField] public RoomConfig RoomConfig { get; private set; }
 
+    public List<AnomalyData> AnomalyDatas { get; private set; } = new List<AnomalyData>();
     public List<AnomalyObject> AnomalyObjects { get; private set; } = new List<AnomalyObject>();
+
+
+
+    public List<IAnomaly> Anomalies { get; private set; } = new List<IAnomaly>();
+    public List<AnomalyConfig> AnomalyConfigs { get; private set; } = new List<AnomalyConfig>();
+
     public List<AnomalyObject> UniqueAnomalyObjects { get; private set; } = new List<AnomalyObject>();
     public List<AnomalyObjectConfig> AnomalyObjectConfigs { get; private set; } = new List<AnomalyObjectConfig>();
-    public List<AnomalyConfig> AnomalyConfigs { get; private set; } = new List<AnomalyConfig>();
     public List<AnomalyConfig> UniqueAnomalyConfigs { get; private set; } = new List<AnomalyConfig>();
 
     public void Initialise()
@@ -25,6 +32,33 @@ public class AnomalyRoom : MonoBehaviour
         SetAnomalyObjectConfigs();
         SetAnomalyConfigs();
         SetUniqueAnomalyConfigs();
+    }
+
+    private void SetAnomalyDatas()
+    {
+        List<IAnomaly> allAnomaliesOnAnomalyObjects = new List<IAnomaly>();
+        foreach (var anomalyObject in AnomalyObjects)
+        {
+            List<IAnomaly> anomaliesOnAnomalyObject = anomalyObject.GetComponents<IAnomaly>().ToList();
+
+            foreach (var anomaly in anomaliesOnAnomalyObject)
+            {
+                allAnomaliesOnAnomalyObjects.Add(anomaly);
+            }
+        }
+
+        List<string> anomalyLocalizationKeysOnAnomalyObjects = new List<string>();
+        foreach (var anomalyLocalizationKey in anomalyLocalizationKeysOnAnomalyObjects)
+        {
+            anomalyLocalizationKeysOnAnomalyObjects.Add(anomalyLocalizationKey);
+        }
+
+        for (int i = 0; i < allAnomaliesOnAnomalyObjects.Count; i++)
+        {
+            AnomalyData newAnomalyData = new AnomalyData(allAnomaliesOnAnomalyObjects[i], anomalyLocalizationKeysOnAnomalyObjects[i]);
+
+            AnomalyDatas.Add(newAnomalyData);
+        }
     }
 
     private void SetAnomalyObjects()
@@ -62,10 +96,10 @@ public class AnomalyRoom : MonoBehaviour
 
     private void SetUniqueAnomalyConfigs()
     {
-        // UniqueAnomalyConfigs = AnomalyConfigs
-        //     .GroupBy(config => config.GetAnomalyType()) // Группируем по уникальному признаку аномалии
-        //     .Select(group => group.First())   // Берем первую аномалию из каждой группы
-        //     .ToList();
+        UniqueAnomalyConfigs = AnomalyConfigs
+            .GroupBy(config => config.Anomaly) // Группируем по уникальному признаку аномалии
+            .Select(group => group.First())   // Берем первую аномалию из каждой группы
+            .ToList();
     }
     #endregion
 

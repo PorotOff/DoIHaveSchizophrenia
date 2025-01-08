@@ -1,21 +1,16 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SendAnomalyReport : MonoBehaviour
 {
-    public static event Action OnAnomalyReportSended;
+    private AnomalyFixingModel anomalyFixingModel;
     private Button button;
 
     private void Awake()
     {
+        anomalyFixingModel = new AnomalyFixingModel();
         button = GetComponent<Button>();
 
-        button.onClick.AddListener(Send);
-    }
-
-    private void Send()
-    {
-        OnAnomalyReportSended?.Invoke();
+        button.onClick.AddListener(anomalyFixingModel.Fix);
     }
 }

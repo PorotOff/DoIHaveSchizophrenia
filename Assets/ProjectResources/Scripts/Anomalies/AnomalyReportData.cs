@@ -5,7 +5,7 @@ public static class AnomalyReportData
     public static event Action OnAnomalyReportDataChanged;
 
     private static AnomalyRoom anomalyRoom { get; set; }
-    private static AnomalyConfig anomalyType { get; set; }
+    private static IAnomaly anomaly { get; set; }
     private static AnomalyObject anomalyObject { get; set; }
 
     public static void SetAnomalyRoom(AnomalyRoom anomalyRoom)
@@ -15,9 +15,9 @@ public static class AnomalyReportData
         OnAnomalyReportDataChanged?.Invoke();
     }
 
-    public static void SetAnomalyType(AnomalyConfig anomalyType)
+    public static void SetAnomaly(IAnomaly anomaly)
     {
-        AnomalyReportData.anomalyType = anomalyType;
+        AnomalyReportData.anomaly = anomaly;
 
         OnAnomalyReportDataChanged?.Invoke();
     }
@@ -36,11 +36,11 @@ public static class AnomalyReportData
         return anomalyRoom;
     }
 
-    public static AnomalyConfig GetAnomaly()
+    public static IAnomaly GetAnomaly()
     {
-        if (anomalyType == null) throw new Exception("Ещё не выбрана аномалия");
+        if (anomaly == null) throw new Exception("Ещё не выбрана аномалия");
 
-        return anomalyType;
+        return anomaly;
     }
 
     public static AnomalyObject GetAnomalyObject()
