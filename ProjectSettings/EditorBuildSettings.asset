@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ProjectResources/Scenes/MenuScene.unity
+    path: Assets/Resources/Scenes/MenuScene.unity
     guid: e9b48c16c5bced144a612ce7027f6517
   - enabled: 1
-    path: Assets/ProjectResources/Scenes/Levels/PrototypeLevel.unity
+    path: Assets/Resources/Scenes/Levels/PrototypeLevel.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Resources/Scenes/Levels/RealButPrototypeLevel.unity
+    guid: 52127500920513847a8f26eafbcbf3dc
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: a7d7e46afb8e7c14290cfc5476bcf5bb, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}

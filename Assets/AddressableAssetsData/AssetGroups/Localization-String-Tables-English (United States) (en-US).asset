@@ -15,50 +15,14 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-English (United States) (en-US)
   m_GUID: 514e43ba14fdcb34294f86a5d0e2618c
   m_SerializeEntries:
-  - m_GUID: 086e1b942295cf646822fee469ae1375
-    m_Address: RoomNames_en-US
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en-US
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3608b2775c93e3043b0f5a34fe4e52f7
     m_Address: AnomalyObjects_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 84122891b4594bf43ab007c726034292
-    m_Address: LevelNames_en-US
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en-US
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8a2766030f71ecd44b9f98c538e49973
     m_Address: MainMenuButtons_en-US
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en-US
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9e46b8bdbc30d5e419cd9d00fdd3925d
-    m_Address: ReportWindow_en-US
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en-US
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c588e577c3e90e949a2c67ea1dbe9645
-    m_Address: AnomalyTypes_en-US
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en-US
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d3b42eb555e06ce42beefe9f368be32e
-    m_Address: SettingsTabButtons_en-US
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en-US
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: faae53291a6fc454cb9150ebf83fd1e6
-    m_Address: AnomalyLocations_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US

@@ -15,50 +15,14 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Russian (Russia) (ru-RU)
   m_GUID: 230acfb9f09eaf941b7d7ccc61d63db5
   m_SerializeEntries:
-  - m_GUID: 0d7a822e5212a5d48a37648ab43f1c20
-    m_Address: AnomalyLocations_ru-RU
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ru-RU
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 19b51c33c78fc654dbc3b594d3b02cd4
-    m_Address: ReportWindow_ru-RU
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ru-RU
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 32197c95a1d711846a7b9cb07ed71563
-    m_Address: RoomNames_ru-RU
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ru-RU
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4a79d0a3bd293854481dcab71ba8d2bc
     m_Address: MainMenuButtons_ru-RU
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru-RU
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 671e432e6b3d11141a45dad68b3e82e3
-    m_Address: LevelNames_ru-RU
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ru-RU
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6b5ca13044d672141afaca783e38c74b
-    m_Address: SettingsTabButtons_ru-RU
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ru-RU
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b34b423111218c14294465abcd032466
     m_Address: AnomalyObjects_ru-RU
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ru-RU
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d264d47e1d4a0dc48af43d6ffd3d9d25
-    m_Address: AnomalyTypes_ru-RU
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru-RU

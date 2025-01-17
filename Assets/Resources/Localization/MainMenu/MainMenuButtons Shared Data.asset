@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: MainMenuButtons Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: MainMenuButtons
+  m_TableCollectionNameGuidString: 7d051107e3f620c44b810a9669f8e29f
+  m_Entries:
+  - m_Id: 220242649088
+    m_Key: PlayButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 315822448640
+    m_Key: SettingsButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 384655171584
+    m_Key: ExitButton
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 2416863601737335117
+  references:
+    version: 2
+    RefIds:
+    - rid: 2416863601737335117
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1735619740665
