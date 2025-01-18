@@ -34,7 +34,7 @@ public class ReportWindowAnimation : MonoBehaviour
             .AppendCallback(() => button.gameObject.SetActive(false))
             .AppendCallback(() => window.SetActive(true))
             .Append(window.transform
-                .DOMoveY(GetReportWindowHeight() + GetButtonHeight(), animationDuration)
+                .DOLocalMoveY(GetReportWindowHeight(), animationDuration)
                 .From(0)
                 .SetEase(Ease.OutCubic))
             .Join(GetReportWindowCanvasGroup()
@@ -57,7 +57,7 @@ public class ReportWindowAnimation : MonoBehaviour
         sequence
             .AppendCallback(() => button.gameObject.SetActive(false))
             .Append(window.transform
-                .DOMoveY(0, animationDuration)
+                .DOLocalMoveY(0, animationDuration)
                 .SetEase(Ease.OutCubic))
             .Join(GetReportWindowCanvasGroup()
                 .DOFade(0, animationDuration)
@@ -73,12 +73,12 @@ public class ReportWindowAnimation : MonoBehaviour
 
     private float GetReportWindowHeight()
     {
-        return window.GetComponent<RectTransform>().rect.height;
+        return window.GetComponent<RectTransform>().rect.height / 2;
     }
 
     private float GetButtonHeight()
     {
-        return button.GetComponent<RectTransform>().rect.height * 2;
+        return button.GetComponent<RectTransform>().rect.height;
     }
 
     private CanvasGroup GetReportWindowCanvasGroup()
