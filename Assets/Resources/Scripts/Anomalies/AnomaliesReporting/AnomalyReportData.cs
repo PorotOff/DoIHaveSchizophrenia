@@ -1,17 +1,18 @@
 using System;
+using UnityEngine;
 
-public static class AnomalyReportData
+public class AnomalyReportData
 {
-    public static event Action OnAnomalyReportDataChanged;
+    public event Action OnAnomalyReportDataChanged;
 
-    private static AnomalyRoom anomalyRoom = null;
-    private static AnomalyData anomalyData = null;
-    private static AnomalyObject anomalyObject = null;
+    private AnomalyRoom anomalyRoom;
+    private AnomalyData anomalyData;
+    private AnomalyObject anomalyObject;
 
     #region Set data methods
-        public static void SetAnomalyRoom(AnomalyRoom anomalyRoom)
+    public void SetAnomalyRoom(AnomalyRoom anomalyRoom)
         {
-            AnomalyReportData.anomalyRoom = anomalyRoom;
+            this.anomalyRoom = anomalyRoom;
 
             anomalyData = null;
             anomalyObject = null;
@@ -19,36 +20,42 @@ public static class AnomalyReportData
             OnAnomalyReportDataChanged?.Invoke();
         }
     
-        public static void SetAnomalyData(AnomalyData anomalyData)
+        public void SetAnomalyData(AnomalyData anomalyData)
         {
-            AnomalyReportData.anomalyData = anomalyData;
+            this.anomalyData = anomalyData;
 
             anomalyObject = null;
     
             OnAnomalyReportDataChanged?.Invoke();
         }
     
-        public static void SetAnomalyObject(AnomalyObject anomalyObject)
+        public void SetAnomalyObject(AnomalyObject anomalyObject)
         {
-            AnomalyReportData.anomalyObject = anomalyObject;
+            this.anomalyObject = anomalyObject;
     
             OnAnomalyReportDataChanged?.Invoke();
         }
     #endregion
 
     #region Get data methods
-        public static AnomalyRoom GetAnomalyRoom()
+        public AnomalyRoom GetAnomalyRoom()
         {
+            Debug.Log($"Getting anomaly room: {anomalyRoom.name}");
+
             return anomalyRoom;
         }
     
-        public static AnomalyData GetAnomalyData()
+        public AnomalyData GetAnomalyData()
         {
+            Debug.Log($"Getting anomaly data: anomaly: {anomalyData.Anomaly}, localizationKey: {anomalyData.LocalizationKey}");
+
             return anomalyData;
         }
     
-        public static AnomalyObject GetAnomalyObject()
+        public AnomalyObject GetAnomalyObject()
         {
+            Debug.Log($"Getting anomaly object: {anomalyObject.name}");
+
             return anomalyObject;
         }
     #endregion

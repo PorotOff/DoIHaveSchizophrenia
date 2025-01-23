@@ -31,7 +31,7 @@ public static class OccuredAnomaliesContainer
             }
         }
 
-        Debug.Log("Не совпали данные для получения аномалии из списка. Возврат null.");
+        Debug.Log("Неправильная проверка данных или такая аномалия ещё не произошла. Возврат null.");
         return null;
     }
 }

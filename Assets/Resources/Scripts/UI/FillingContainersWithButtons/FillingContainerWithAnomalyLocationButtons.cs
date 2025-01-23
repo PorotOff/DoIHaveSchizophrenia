@@ -44,7 +44,7 @@ public class FillingContainerWithAnomalyLocationButtons : FillingContainerWithBu
     {
         var anomalyRoom = item as AnomalyRoom;
 
-        AnomalyReportData.SetAnomalyRoom(anomalyRoom);
+        anomalyReportData.SetAnomalyRoom(anomalyRoom);
 
         anomalyTypesButtonsFiller.Initialise(anomalyRoom, anomalyObjectsButtonsFiller);
         anomalyObjectsButtonsFiller.DestroyAllButtonsInContainer();

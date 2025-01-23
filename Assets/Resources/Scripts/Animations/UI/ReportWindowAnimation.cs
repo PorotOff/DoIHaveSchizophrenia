@@ -1,14 +1,13 @@
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Localization.Components;
-using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 public class ReportWindowAnimation : MonoBehaviour
 {
-    [SerializeField] private GameObject window;
+    [SerializeField] private GameObject reportWindowBody;
 
-    [SerializeField] private Button button;
+    [SerializeField] private Button reportWindowButton;
     [SerializeField] private LocalizeStringEvent buttonLocalizedText;
     [SerializeField] private string openWindowLocalizedString;
     [SerializeField] private string closeWindowLocalizedString;
@@ -19,10 +18,10 @@ public class ReportWindowAnimation : MonoBehaviour
     private void Awake()
     {
         buttonLocalizedText.StringReference.TableEntryReference = openWindowLocalizedString;
-        button.onClick.AddListener(UpWindow);
+        reportWindowButton.onClick.AddListener(UpWindow);
 
-        button.gameObject.SetActive(true);
-        window.SetActive(false);
+        reportWindowButton.gameObject.SetActive(true);
+        reportWindowBody.SetActive(false);
     }
 
     private void UpWindow()
@@ -31,9 +30,9 @@ public class ReportWindowAnimation : MonoBehaviour
         sequence = DOTween.Sequence();
 
         sequence
-            .AppendCallback(() => button.gameObject.SetActive(false))
-            .AppendCallback(() => window.SetActive(true))
-            .Append(window.transform
+            .AppendCallback(() => reportWindowButton.gameObject.SetActive(false))
+            .AppendCallback(() => reportWindowBody.SetActive(true))
+            .Append(reportWindowBody.transform
                 .DOLocalMoveY(GetReportWindowHeight(), animationDuration)
                 .From(0)
                 .SetEase(Ease.OutCubic))
@@ -42,9 +41,9 @@ public class ReportWindowAnimation : MonoBehaviour
                 .From(0)
                 .SetEase(Ease.OutCubic))
             .AppendCallback(() => buttonLocalizedText.StringReference.TableEntryReference = closeWindowLocalizedString)
-            .AppendCallback(() => button.onClick.RemoveAllListeners())
-            .AppendCallback(() => button.onClick.AddListener(DownWindow))
-            .AppendCallback(() => button.gameObject.SetActive(true));
+            .AppendCallback(() => reportWindowButton.onClick.RemoveAllListeners())
+            .AppendCallback(() => reportWindowButton.onClick.AddListener(DownWindow))
+            .AppendCallback(() => reportWindowButton.gameObject.SetActive(true));
 
         sequence.Play();
     }
@@ -55,34 +54,34 @@ public class ReportWindowAnimation : MonoBehaviour
         sequence = DOTween.Sequence();
 
         sequence
-            .AppendCallback(() => button.gameObject.SetActive(false))
-            .Append(window.transform
+            .AppendCallback(() => reportWindowButton.gameObject.SetActive(false))
+            .Append(reportWindowBody.transform
                 .DOLocalMoveY(0, animationDuration)
                 .SetEase(Ease.OutCubic))
             .Join(GetReportWindowCanvasGroup()
                 .DOFade(0, animationDuration)
                 .SetEase(Ease.OutCubic))
-            .AppendCallback(() => window.SetActive(false))
+            .AppendCallback(() => reportWindowBody.SetActive(false))
             .AppendCallback(() => buttonLocalizedText.StringReference.TableEntryReference = openWindowLocalizedString)
-            .AppendCallback(() => button.onClick.RemoveAllListeners())
-            .AppendCallback(() => button.onClick.AddListener(UpWindow))
-            .AppendCallback(() => button.gameObject.SetActive(true));
+            .AppendCallback(() => reportWindowButton.onClick.RemoveAllListeners())
+            .AppendCallback(() => reportWindowButton.onClick.AddListener(UpWindow))
+            .AppendCallback(() => reportWindowButton.gameObject.SetActive(true));
 
         sequence.Play();
     }
 
     private float GetReportWindowHeight()
     {
-        return window.GetComponent<RectTransform>().rect.height / 2;
+        return reportWindowBody.GetComponent<RectTransform>().rect.height / 2;
     }
 
     private float GetButtonHeight()
     {
-        return button.GetComponent<RectTransform>().rect.height;
+        return reportWindowButton.GetComponent<RectTransform>().rect.height;
     }
 
     private CanvasGroup GetReportWindowCanvasGroup()
     {
-        return window.GetComponent<CanvasGroup>();
+        return reportWindowBody.GetComponent<CanvasGroup>();
     }
 }

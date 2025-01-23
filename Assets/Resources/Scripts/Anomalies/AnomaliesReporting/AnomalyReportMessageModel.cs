@@ -2,20 +2,23 @@ using UnityEngine.Localization;
 
 public class AnomalyReportMessageModel
 {
+    private AnomalyReportData anomalyReportData;
+
     private LocalizedString localizedMessage;
     private LocalizedString defaultLocalizedText;
 
-    public AnomalyReportMessageModel(LocalizedString localizedMessage, LocalizedString defaultLocalizedText)
+    public AnomalyReportMessageModel(AnomalyReportData anomalyReportData, LocalizedString localizedMessage, LocalizedString defaultLocalizedText)
     {
+        this.anomalyReportData = anomalyReportData;
         this.localizedMessage = localizedMessage;
         this.defaultLocalizedText = defaultLocalizedText;
     }
 
     public string GetFormattedMessage()
     {
-        string anomalyRoomLocalizationKey = GetLocalizedValue("AnomalyLocations", AnomalyReportData.GetAnomalyRoom()?.GetLocalizationKey());
-        string anomalyTypeLocalizationKey = GetLocalizedValue("AnomalyTypes", AnomalyReportData.GetAnomalyData()?.LocalizationKey);
-        string anomalyObjectLocalizationKey = GetLocalizedValue("AnomalyObjects", AnomalyReportData.GetAnomalyObject()?.GetLocalizationKey());
+        string anomalyRoomLocalizationKey = GetLocalizedValue("AnomalyLocations", anomalyReportData.GetAnomalyRoom()?.GetLocalizationKey());
+        string anomalyTypeLocalizationKey = GetLocalizedValue("AnomalyTypes", anomalyReportData.GetAnomalyData()?.LocalizationKey);
+        string anomalyObjectLocalizationKey = GetLocalizedValue("AnomalyObjects", anomalyReportData.GetAnomalyObject()?.GetLocalizationKey());
         string defaultLocalizedTextLocalizationKey = defaultLocalizedText.GetLocalizedString();
 
         string anomalyRoomLocalizationString = anomalyRoomLocalizationKey ?? defaultLocalizedTextLocalizationKey;
