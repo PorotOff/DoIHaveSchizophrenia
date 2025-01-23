@@ -16,9 +16,8 @@ public class GameBootstrap : MonoBehaviour
     [SerializeField] private int currentCameraIndex = 0;
     #endregion
 
-    #region Data containers
-    [Header("Data containers")]
-    private AnomalyReportData anomalyReportData;
+    #region Anomalies containers
+    [Header("Anomalies containers")]
     [SerializeField] private AnomalyRoomsContainer anomalyRoomsContainer;
     #endregion
 
@@ -30,10 +29,6 @@ public class GameBootstrap : MonoBehaviour
     [SerializeField] private FillingContainerWithAnomalyTypesButtons anomalyTypesButtonsFiller;
     [SerializeField] private FillingContainerWithAnomalyObjectButtons anomalyObjectButtonsButtonsFiller;
     #endregion
-
-    [Header("Anomalies reporting and fixing")]
-    [SerializeField] private AnomalyReportMessageView anomalyReportMessageView;
-    [SerializeField] private AnomalyFixing anomalyFixing;
 
     [Header("Anomalies summoner settings")]
     [SerializeField] private AnomaliesSummoner anomaliesSummoner;
@@ -50,18 +45,14 @@ public class GameBootstrap : MonoBehaviour
         StartSecurityCameraAnimations();
         #endregion
 
-        #region Data containers
-        anomalyReportData = new AnomalyReportData();
+        #region Anomalies containers
         anomalyRoomsContainer.Initialise();
         #endregion
 
-        anomalyReportMessageView.Initialise(anomalyReportData);
-        anomalyFixing.Initialise(anomalyReportData);
-
         #region Filling containers with buttons
-        anomalyLocationButtonsFiller.Initialise(anomalyReportData, buttonPrefab);
-        anomalyTypesButtonsFiller.Initialise(anomalyReportData, buttonPrefab);
-        anomalyObjectButtonsButtonsFiller.Initialise(anomalyReportData, buttonPrefab);
+        anomalyLocationButtonsFiller.Initialise(buttonPrefab);
+        anomalyTypesButtonsFiller.Initialise(buttonPrefab);
+        anomalyObjectButtonsButtonsFiller.Initialise(buttonPrefab);
 
         anomalyLocationButtonsFiller.Initialise(anomalyRoomsContainer, anomalyTypesButtonsFiller, anomalyObjectButtonsButtonsFiller);
         #endregion

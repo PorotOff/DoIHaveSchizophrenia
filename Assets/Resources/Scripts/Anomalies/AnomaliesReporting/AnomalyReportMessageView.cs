@@ -5,7 +5,6 @@ using UnityEngine.Localization;
 
 public class AnomalyReportMessageView : MonoBehaviour
 {
-    private AnomalyReportData anomalyReportData;
     private AnomalyReportMessageModel anomalyReportMessageModel;
 
     [SerializeField] private LocalizedString localizedMessage;
@@ -13,23 +12,21 @@ public class AnomalyReportMessageView : MonoBehaviour
 
     private TMP_Text reportMessage;
 
-    public void Initialise(AnomalyReportData anomalyReportData)
+    private void Awake()
     {
-        this.anomalyReportData = anomalyReportData;
-
         reportMessage = GetComponent<TMP_Text>();
 
-        anomalyReportMessageModel = new AnomalyReportMessageModel(anomalyReportData, localizedMessage, defaultLocalizedText);
+        anomalyReportMessageModel = new AnomalyReportMessageModel(localizedMessage, defaultLocalizedText);
     }
 
     private void OnEnable()
     {
-        anomalyReportData.OnAnomalyReportDataChanged += UpdateReportMessage;
+        AnomalyReportData.OnAnomalyReportDataChanged += UpdateReportMessage;
         StartCoroutine(LateUpdateReportMessage());
     }
     private void OnDisable()
     {
-        anomalyReportData.OnAnomalyReportDataChanged -= UpdateReportMessage;
+        AnomalyReportData.OnAnomalyReportDataChanged -= UpdateReportMessage;
     }
 
     private void UpdateReportMessage()

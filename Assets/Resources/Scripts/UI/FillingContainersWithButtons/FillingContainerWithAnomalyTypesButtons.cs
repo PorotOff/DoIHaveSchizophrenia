@@ -34,7 +34,7 @@ public class FillingContainerWithAnomalyTypesButtons : FillingContainerWithButto
     {        
         var anomalyData = item as AnomalyData;
 
-        anomalyReportData.SetAnomalyData(anomalyData);
+        AnomalyReportData.SetAnomalyData(anomalyData);
 
         anomalyObjectsButtonsFiller.Initialise(anomalyRoom, anomalyData.Anomaly);
     }

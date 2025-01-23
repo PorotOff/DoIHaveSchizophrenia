@@ -6,9 +6,9 @@ public class AnomalyFixing : MonoBehaviour
     private AnomalyFixingModel anomalyFixingModel;
     private Button button;
 
-    public void Initialise(AnomalyReportData anomalyReportData)
+    private void Awake()
     {
-        anomalyFixingModel = new AnomalyFixingModel(anomalyReportData);
+        anomalyFixingModel = new AnomalyFixingModel();
         button = GetComponent<Button>();
 
         button.onClick.AddListener(anomalyFixingModel.Fix);
