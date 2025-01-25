@@ -10,6 +10,7 @@ public class MainMenuBootstrap : MonoBehaviour
 
     private void Awake()
     {
-        levelButtonsFiller.Initialise(buttonPrefab, levelListConfig);
+        levelButtonsFiller.Initialise(buttonPrefab);
+        levelButtonsFiller.Initialise(levelListConfig);
     }
 }

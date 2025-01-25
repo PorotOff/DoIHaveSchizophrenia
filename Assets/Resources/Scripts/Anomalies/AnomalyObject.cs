@@ -11,20 +11,7 @@ public class AnomalyObject : MonoBehaviour
     public void Initialise()
     {
         AddAnomalyComponents();
-    }
-
-    public void AnomalyOccur(IAnomaly anomaly)
-    {
-        anomaly.Occur();
-
-        OccuredAnomaliesContainer.AddOccuredAnomalyData(new OccuredAnomalyData(this, anomaly));
-    }
-
-    public void AnomalyFix(IAnomaly anomaly)
-    {
-        anomaly.Fix();
-
-        OccuredAnomaliesContainer.RemoveOccuredAnomalyByData(new OccuredAnomalyData(this, anomaly));
+        InitialiseAllAnomalies();
     }
 
     #region Get data methods
@@ -94,5 +81,13 @@ public class AnomalyObject : MonoBehaviour
     private void SetAnomalyData(IAnomaly anomaly, string localizationKey)
     {
         anomalyDatas.Add(new AnomalyData(anomaly, localizationKey));
+    }
+
+    private void InitialiseAllAnomalies()
+    {
+        foreach (var anomalyData in anomalyDatas)
+        {
+            anomalyData.Anomaly.Initialise();
+        }
     }
 }

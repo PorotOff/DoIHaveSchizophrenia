@@ -50,7 +50,5 @@ public class FillingContainerWithAnomalyObjectButtons : FillingContainerWithButt
         var anomalyObject = item as AnomalyObject;
 
         AnomalyReportData.SetAnomalyObject(anomalyObject);
-
-        Debug.Log($"Нажата кнопка {anomalyObject.GetLocalizationKey()}");
     }
 }

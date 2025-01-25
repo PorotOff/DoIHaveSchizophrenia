@@ -1,14 +1,16 @@
-using UnityEngine;
-
-public class ObjectDisappearanceAnomaly : MonoBehaviour, IAnomaly
+public class ObjectDisappearanceAnomaly : BaseAnomalyType
 {
-    public void Occur()
+    public override void Occur()
     {
+        base.Occur();
+        
         gameObject.SetActive(false);
     }
 
-    public void Fix()
+    public override void Fix()
     {
+        base.Fix();
+
         gameObject.SetActive(true);
     }
 }

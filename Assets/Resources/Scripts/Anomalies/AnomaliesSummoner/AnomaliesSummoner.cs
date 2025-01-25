@@ -21,15 +21,6 @@ public class AnomaliesSummoner : MonoBehaviour
         StartCoroutine(SummonAnomalies());
     }
 
-    private void SummonRandomAnomaly()
-    {
-        AnomalyRoom randomAnomalyRoom = anomaliesSummonerModel.GetRandomAnomalyRoom(anomalyRoomsContainer);
-        AnomalyObject randomAnomalyObject = anomaliesSummonerModel.GetRandomAnomalyObject(randomAnomalyRoom);
-        IAnomaly randomAnomaly = anomaliesSummonerModel.GetRandomAnomaly(randomAnomalyObject);
-        
-        randomAnomalyObject.AnomalyOccur(randomAnomaly);
-    }
-
     private IEnumerator SummonAnomalies()
     {
         while (true)
@@ -39,5 +30,14 @@ public class AnomaliesSummoner : MonoBehaviour
 
             SummonRandomAnomaly();
         }
+    }
+
+    private void SummonRandomAnomaly()
+    {
+        AnomalyRoom randomAnomalyRoom = anomaliesSummonerModel.GetRandomAnomalyRoom(anomalyRoomsContainer);
+        AnomalyObject randomAnomalyObject = anomaliesSummonerModel.GetRandomAnomalyObject(randomAnomalyRoom);
+        IAnomaly randomAnomaly = anomaliesSummonerModel.GetRandomAnomaly(randomAnomalyObject);
+        
+        randomAnomaly.Occur();
     }
 }

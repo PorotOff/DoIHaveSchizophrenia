@@ -1,5 +1,4 @@
 using System;
-using UnityEngine;
 
 public static class AnomalyReportData
 {
@@ -40,43 +39,16 @@ public static class AnomalyReportData
     #region Get data methods
         public static AnomalyRoom GetAnomalyRoom()
         {
-            try
-            {
-                Debug.Log($"Получение аномальной комнаты {anomalyRoom.name}");
-            }
-            catch (Exception e)
-            {                
-                throw new Exception($"Не удалось получить аномальную комнату. Ошибка: {e.Message}");
-            }
-
             return anomalyRoom;
         }
     
         public static AnomalyData GetAnomalyData()
         {
-            try
-            {
-                Debug.Log($"Получение данных аномалии: тип аномалии {anomalyData.Anomaly.GetType().Name}, ключ локализации: {anomalyData.LocalizationKey}");
-            }
-            catch (Exception e)
-            {                
-                throw new Exception($"Не удалось получить данные аномалии. Ошибка: {e.Message}");
-            }
-
             return anomalyData;
         }
     
         public static AnomalyObject GetAnomalyObject()
         {
-            try
-            {
-                Debug.Log($"Получение аномального объекта {anomalyObject.name}");
-            }
-            catch (Exception e)
-            {                
-                throw new Exception($"Не удалось получить аномальный объект. Ошибка: {e.Message}");
-            }
-
             return anomalyObject;
         }
     #endregion

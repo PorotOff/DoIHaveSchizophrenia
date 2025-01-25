@@ -10,14 +10,11 @@ public abstract class FillingContainerWithButtons : MonoBehaviour
     private Transform buttonsContainer;
     private Button buttonPrefab;
 
-    private void Awake()
-    {
-        buttonsContainer = GetComponent<Transform>();
-    }
-
     public void Initialise(Button buttonPrefab)
     {
         this.buttonPrefab = buttonPrefab;
+
+        buttonsContainer = GetComponent<Transform>();
     }
 
     private void OnDisable()

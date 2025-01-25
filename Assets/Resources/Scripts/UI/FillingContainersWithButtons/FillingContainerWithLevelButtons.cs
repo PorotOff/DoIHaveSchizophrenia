@@ -7,10 +7,8 @@ public class FillingContainerWithLevelButtons : FillingContainerWithButtons
 {
     private LevelListConfig levelListConfig;
 
-    public void Initialise(Button buttonPrefab, LevelListConfig levelListConfig)
+    public void Initialise(LevelListConfig levelListConfig)
     {
-        base.Initialise(buttonPrefab);
-
         this.levelListConfig = levelListConfig;
 
         FillWithLocalizedButtons();

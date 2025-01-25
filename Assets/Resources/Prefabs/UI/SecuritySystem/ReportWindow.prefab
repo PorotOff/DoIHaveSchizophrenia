@@ -1872,8 +1872,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c82cfb120907e4685738bdbda0ee18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  window: {fileID: 5622627709422448432}
-  button: {fileID: 2698323670081569472}
+  reportWindowBody: {fileID: 5622627709422448432}
+  reportWindowButton: {fileID: 2698323670081569472}
   buttonLocalizedText: {fileID: 6999303139158302522}
   openWindowLocalizedString: OpenReportWindow
   closeWindowLocalizedString: CloseReportWindow
