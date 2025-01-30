@@ -15,12 +15,6 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Russian (Russia)
   m_GUID: 90ee38c69f14b604c81edabf181779fb
   m_SerializeEntries:
-  - m_GUID: 0d7a822e5212a5d48a37648ab43f1c20
-    m_Address: AnomalyLocations_ru-RU
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ru-RU
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 671e432e6b3d11141a45dad68b3e82e3
     m_Address: LevelNames_ru-RU
     m_ReadOnly: 1

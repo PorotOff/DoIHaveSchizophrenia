@@ -34,10 +34,10 @@ public class AnomaliesSummoner : MonoBehaviour
 
     private void SummonRandomAnomaly()
     {
-        AnomalyRoom randomAnomalyRoom = anomaliesSummonerModel.GetRandomAnomalyRoom(anomalyRoomsContainer);
-        AnomalyObject randomAnomalyObject = anomaliesSummonerModel.GetRandomAnomalyObject(randomAnomalyRoom);
-        IAnomaly randomAnomaly = anomaliesSummonerModel.GetRandomAnomaly(randomAnomalyObject);
+        AnomalyRoom anomalyRoom = anomaliesSummonerModel.GetRandomAnomalyRoom(anomalyRoomsContainer);
+        AnomalyObject anomalyObject = anomaliesSummonerModel.GetRandomAnomalyObject(anomalyRoom);
+        AnomalyData anomalyData = anomaliesSummonerModel.GetRandomAnomaly(anomalyObject);
         
-        randomAnomaly.Occur();
+        anomalyObject.OccurAnomaly(anomalyData);
     }
 }

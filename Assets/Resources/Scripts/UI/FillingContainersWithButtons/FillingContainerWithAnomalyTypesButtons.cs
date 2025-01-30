@@ -26,7 +26,7 @@ public class FillingContainerWithAnomalyTypesButtons : FillingContainerWithButto
         return new LocalizedString
         {
             TableReference = "AnomalyTypes",
-            TableEntryReference = anomalyData.LocalizationKey
+            TableEntryReference = anomalyData.AnomalyConfig.LocalizationKey
         };
     }
 

@@ -4,7 +4,7 @@ using System.Linq;
 
 public class AnomalyRoom : MonoBehaviour
 {
-    [SerializeField] private RoomConfig RoomConfig;
+    [field: SerializeField] public AnomalyRoomConfig AnomalyRoomConfig { get; private set; }
 
     private List<AnomalyObject> allAnomalyObjects = new List<AnomalyObject>();
     private List<AnomalyObject> uniqueAnomalyObjects = new List<AnomalyObject>();
@@ -23,12 +23,7 @@ public class AnomalyRoom : MonoBehaviour
         SetUniqueAnomalyDatas();
     }
 
-    public string GetLocalizationKey()
-    {
-        return RoomConfig.LocalisationKey;
-    }
-
-    #region List Accessor Methods
+    #region Get data methods
     public List<AnomalyObject> GetAllAnomalyObjects()
     {
         return new List<AnomalyObject>(allAnomalyObjects);
@@ -68,19 +63,11 @@ public class AnomalyRoom : MonoBehaviour
     {
         foreach (var anomalyObject in allAnomalyObjects)
         {
-            anomalyObject.Initialise();
+            anomalyObject.Initialise(this);
         }
     }
 
-    #region List Setup Methods
-    private void SetAllLists()
-    {
-        SetAllAnomalyObjects();
-        SetUniqueAnomalyObjects();
-        SetAllAnomalyDatas();
-        SetUniqueAnomalyDatas();
-    }
-
+    #region Set data methods
     private void SetAllAnomalyObjects()
     {
         allAnomalyObjects = GetComponentsInChildren<AnomalyObject>().ToList();
@@ -89,7 +76,7 @@ public class AnomalyRoom : MonoBehaviour
     private void SetUniqueAnomalyObjects()
     {
         uniqueAnomalyObjects = allAnomalyObjects
-            .GroupBy(anomalyObject => anomalyObject.anomalyObjectConfig)
+            .GroupBy(anomalyObject => anomalyObject.AnomalyObjectConfig)
             .Select(group => group.First())
             .ToList();
     }
@@ -98,7 +85,7 @@ public class AnomalyRoom : MonoBehaviour
     {
         foreach (var anomalyObject in allAnomalyObjects)
         {
-            foreach (var anomalyData in anomalyObject.GetAnomalyDatas())
+            foreach (var anomalyData in anomalyObject.GetNotOccurredAnomalyDatas())
             {
                 allAnomalyDatas.Add(anomalyData);
             }
@@ -145,7 +132,7 @@ public class AnomalyRoom : MonoBehaviour
 
         foreach (var anomalyData in allAnomalyDatas)
         {
-            Debug.Log($"Room {name}: Anomaly: {anomalyData.Anomaly}, LocalizationKey: {anomalyData.LocalizationKey}");
+            Debug.Log($"Room {name}: Anomaly: {anomalyData.Anomaly}, LocalizationKey: {anomalyData.AnomalyConfig.LocalizationKey}");
         }
     }
 
@@ -155,7 +142,7 @@ public class AnomalyRoom : MonoBehaviour
 
         foreach (var anomalyData in uniqueAnomalyDatas)
         {
-            Debug.Log($"Room {name}: Anomaly: {anomalyData.Anomaly}, LocalizationKey: {anomalyData.LocalizationKey}");
+            Debug.Log($"Room {name}: Anomaly: {anomalyData.Anomaly}, LocalizationKey: {anomalyData.AnomalyConfig.LocalizationKey}");
         }
     }
     #endregion

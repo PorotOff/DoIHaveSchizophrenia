@@ -2,12 +2,16 @@ public class AnomalyFixingModel
 {
     public void Fix()
     {
-        AnomalyObject anomalyObject = AnomalyReportData.GetAnomalyObject();
+        AnomalyRoom anomalyRoom = AnomalyReportData.GetAnomalyRoom();
         AnomalyData anomalyData = AnomalyReportData.GetAnomalyData();
-        OccuredAnomalyData newOccuredAnomalyData = new OccuredAnomalyData(anomalyObject, anomalyData.Anomaly);
-        
-        OccuredAnomalyData occuredAnomalyDataForFix = OccuredAnomaliesContainer.GetOccuredAnomalyDataByData(newOccuredAnomalyData);
+        AnomalyObject anomalyObject = AnomalyReportData.GetAnomalyObject();
 
-        occuredAnomalyDataForFix.Anomaly.Fix();
+        OccurredAnomalyData occurredAnomalyData = new OccurredAnomalyData(anomalyRoom, anomalyData, anomalyObject);
+
+        OccurredAnomalyData occurredAnomalyDataForFix = OccurredAnomaliesContainer.GetOccurredAnomalyDataByData(occurredAnomalyData);
+        AnomalyData anomalyDataForFix = occurredAnomalyDataForFix.AnomalyData;
+        AnomalyObject anomalyObjectForFix = occurredAnomalyDataForFix.AnomalyObject;
+
+        anomalyObjectForFix.FixAnomaly(anomalyDataForFix);
     }
 }

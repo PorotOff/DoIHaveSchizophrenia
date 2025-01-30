@@ -28,9 +28,9 @@ public class AnomaliesSummonerModel
         return allAnomalyObjectsInRoom[Random.Range(0, allAnomalyObjectsInRoom.Count)];
     }
 
-    public IAnomaly GetRandomAnomaly(AnomalyObject anomalyObject)
+    public AnomalyData GetRandomAnomaly(AnomalyObject anomalyObject)
     {
-        List<IAnomaly> anomalies = anomalyObject.GetAnomalies();
+        List<AnomalyData> anomalies = anomalyObject.GetNotOccurredAnomalyDatas();
         if (anomalies.Count == 0) throw new System.Exception($"На объекте {anomalyObject.name} нет аномалий");
 
         return anomalies[Random.Range(0, anomalies.Count)];

@@ -35,8 +35,8 @@ public class FillingContainerWithAnomalyLocationButtons : FillingContainerWithBu
 
         return new LocalizedString
         {
-            TableReference = "AnomalyLocations",
-            TableEntryReference = anomalyRoom.GetLocalizationKey()
+            TableReference = "AnomalyRooms",
+            TableEntryReference = anomalyRoom.AnomalyRoomConfig.LocalizationKey
         };
     }
 

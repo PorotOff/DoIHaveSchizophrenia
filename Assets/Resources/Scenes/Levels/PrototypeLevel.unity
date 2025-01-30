@@ -772,7 +772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: da54b27642860c745b145c776f596680, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: da54b27642860c745b145c776f596680, type: 3}
       propertyPath: m_LocalScale.y
@@ -981,7 +981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 84c94592134e61d4d8adf0a655480553, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 84c94592134e61d4d8adf0a655480553, type: 2}
 --- !u!1 &114463689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,7 +1062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: f98d2da516a53f34fb42c25d0cf2422b, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: f98d2da516a53f34fb42c25d0cf2422b, type: 2}
 --- !u!108 &126531763
 Light:
   m_ObjectHideFlags: 0
@@ -1198,7 +1198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7832447539060439114, guid: 5c300e2de5fdc0d43b2b7997de4aa97a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2942,7 +2942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 73f94147c417c6344b42f3c152808392, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 73f94147c417c6344b42f3c152808392, type: 2}
 --- !u!43 &188149027
 Mesh:
   m_ObjectHideFlags: 0
@@ -4311,7 +4311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0704dfef9b930194a8320afe01a3b75e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RoomConfig: {fileID: 11400000, guid: 3e392db212ffd92479de4a5a1ea73605, type: 2}
+  <AnomalyRoomConfig>k__BackingField: {fileID: 11400000, guid: 3e392db212ffd92479de4a5a1ea73605, type: 2}
 --- !u!43 &457448365
 Mesh:
   m_ObjectHideFlags: 0
@@ -4572,7 +4572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: b11838d7161f47c478a223e0edc2f4e9, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: b11838d7161f47c478a223e0edc2f4e9, type: 2}
 --- !u!4 &527240319 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7480601738346730622, guid: 29da025a34eaa5d4eabe6fac544b245d, type: 3}
@@ -5253,7 +5253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3962899205002032433, guid: aaf11a042e9932a40bb90b9b171a128e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4446420041510072203, guid: aaf11a042e9932a40bb90b9b171a128e, type: 3}
       propertyPath: m_LocalScale.x
@@ -5442,7 +5442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 1e00a1b978d085f4c9801321b5240fd3, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 1e00a1b978d085f4c9801321b5240fd3, type: 2}
 --- !u!1001 &630278239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6231,7 +6231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0704dfef9b930194a8320afe01a3b75e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RoomConfig: {fileID: 11400000, guid: a06ea5936b151ba48afdaec82deb4065, type: 2}
+  <AnomalyRoomConfig>k__BackingField: {fileID: 11400000, guid: a06ea5936b151ba48afdaec82deb4065, type: 2}
 --- !u!1 &787951756
 GameObject:
   m_ObjectHideFlags: 0
@@ -7939,7 +7939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &851396016
 Transform:
   m_ObjectHideFlags: 0
@@ -9711,7 +9711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &877479264
 Transform:
   m_ObjectHideFlags: 0
@@ -9721,7 +9721,7 @@ Transform:
   m_GameObject: {fileID: 877479263}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.25, y: 2, z: -2.5}
+  m_LocalPosition: {x: 10.25, y: 3, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9907,7 +9907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: f98d2da516a53f34fb42c25d0cf2422b, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: f98d2da516a53f34fb42c25d0cf2422b, type: 2}
 --- !u!1001 &908421062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10213,7 +10213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 84c94592134e61d4d8adf0a655480553, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 84c94592134e61d4d8adf0a655480553, type: 2}
 --- !u!1001 &968838554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10295,7 +10295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3962899205002032433, guid: aaf11a042e9932a40bb90b9b171a128e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4446420041510072203, guid: aaf11a042e9932a40bb90b9b171a128e, type: 3}
       propertyPath: m_LocalScale.x
@@ -10383,7 +10383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 78f1080dfb061114bb7714ee511de46f, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 78f1080dfb061114bb7714ee511de46f, type: 2}
 --- !u!1 &1015985395
 GameObject:
   m_ObjectHideFlags: 0
@@ -11475,7 +11475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: da54b27642860c745b145c776f596680, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: da54b27642860c745b145c776f596680, type: 3}
       propertyPath: m_LocalScale.y
@@ -11808,7 +11808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3100977637603886154, guid: bc5ace9739a08124cb086b53e6f71b74, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12353,7 +12353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 78f1080dfb061114bb7714ee511de46f, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 78f1080dfb061114bb7714ee511de46f, type: 2}
 --- !u!1001 &1516471021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12535,7 +12535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 4da8ce9499a797a48b26e028657e6243, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 4da8ce9499a797a48b26e028657e6243, type: 2}
 --- !u!1 &1584259942
 GameObject:
   m_ObjectHideFlags: 0
@@ -12767,7 +12767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 78f1080dfb061114bb7714ee511de46f, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 78f1080dfb061114bb7714ee511de46f, type: 2}
 --- !u!4 &1629634319 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 6aefd9b8d8cb28f4f87b54d78bf0fca3, type: 3}
@@ -12790,7 +12790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 2a76743725134884dbeee63bcbb16b7b, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 2a76743725134884dbeee63bcbb16b7b, type: 2}
 --- !u!1 &1642342939
 GameObject:
   m_ObjectHideFlags: 0
@@ -12990,7 +12990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 78f1080dfb061114bb7714ee511de46f, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 78f1080dfb061114bb7714ee511de46f, type: 2}
 --- !u!1 &1708378069
 GameObject:
   m_ObjectHideFlags: 0
@@ -13068,7 +13068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1732609679
 Transform:
   m_ObjectHideFlags: 0
@@ -13101,7 +13101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0704dfef9b930194a8320afe01a3b75e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RoomConfig: {fileID: 11400000, guid: c0f6283bf6093714582f83b4c0c88db4, type: 2}
+  <AnomalyRoomConfig>k__BackingField: {fileID: 11400000, guid: c0f6283bf6093714582f83b4c0c88db4, type: 2}
 --- !u!1 &1742603222
 GameObject:
   m_ObjectHideFlags: 0
@@ -13474,7 +13474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: b11838d7161f47c478a223e0edc2f4e9, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: b11838d7161f47c478a223e0edc2f4e9, type: 2}
 --- !u!1 &1804608793 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3962899205002032433, guid: aaf11a042e9932a40bb90b9b171a128e, type: 3}
@@ -13497,7 +13497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 1e00a1b978d085f4c9801321b5240fd3, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 1e00a1b978d085f4c9801321b5240fd3, type: 2}
 --- !u!43 &1810460899
 Mesh:
   m_ObjectHideFlags: 0
@@ -13771,7 +13771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 73f94147c417c6344b42f3c152808392, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 73f94147c417c6344b42f3c152808392, type: 2}
 --- !u!4 &1844259047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2344599820086311694, guid: 1d6bd57fef0d09a4ca288a9353656510, type: 3}
@@ -13789,7 +13789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e7c46712169d4b8b9ea0c8fcb9b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <anomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 78f1080dfb061114bb7714ee511de46f, type: 2}
+  <AnomalyObjectConfig>k__BackingField: {fileID: 11400000, guid: 78f1080dfb061114bb7714ee511de46f, type: 2}
 --- !u!1 &1873860854
 GameObject:
   m_ObjectHideFlags: 0
@@ -14172,7 +14172,7 @@ Transform:
   m_GameObject: {fileID: 2007025238}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14358,7 +14358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: b7768e1703027114b8fb81cb29192dc8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: b7768e1703027114b8fb81cb29192dc8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14422,7 +14422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: b7768e1703027114b8fb81cb29192dc8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: b7768e1703027114b8fb81cb29192dc8, type: 3}
       propertyPath: m_LocalPosition.x

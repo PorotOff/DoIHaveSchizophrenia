@@ -2,13 +2,12 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "AnomalyConfig", menuName = "CONFIGURATIONS/Anomalies/AnomalyConfig", order = 0)]
-public class AnomalyConfig : ScriptableObject
+[CreateAssetMenu(fileName = "Anomaly", menuName = "CONFIGURATIONS/Anomalies/Anomaly", order = 0)]
+public class AnomalyConfig : BaseAnomalyConfig
 {
     [field: SerializeField] public MonoScript Anomaly { get; private set; }
-    [field: SerializeField] public string LocalizationKey { get; private set; }
 
-    public Type GetAnomaly()
+    public Type GetAnomalyAsType()
     {
         Type anomalyType = Anomaly.GetClass();
 

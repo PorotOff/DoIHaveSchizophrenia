@@ -41,7 +41,7 @@ public class FillingContainerWithAnomalyObjectButtons : FillingContainerWithButt
         return new LocalizedString
         {
             TableReference = "AnomalyObjects",
-            TableEntryReference = anomalyObject.GetLocalizationKey()
+            TableEntryReference = anomalyObject.AnomalyObjectConfig.LocalizationKey
         };
     }
 

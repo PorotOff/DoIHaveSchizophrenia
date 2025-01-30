@@ -1,27 +1,21 @@
 using UnityEngine;
 
-public class TurningOfLightAnomaly : BaseAnomalyType
+public class TurningOfLightAnomaly : MonoBehaviour, IAnomaly
 {
     private Light bulbLight;
 
-    public override void Initialise()
+    private void Awake()
     {
-        base.Initialise();
-
         bulbLight = GetComponent<Light>();
     }
 
-    public override void Occur()
+    public void Occur()
     {
-        base.Occur();
-
         bulbLight.enabled = false;
     }
 
-    public override void Fix()
+    public void Fix()
     {
-        base.Fix();
-
         bulbLight.enabled = true;
     }
 }

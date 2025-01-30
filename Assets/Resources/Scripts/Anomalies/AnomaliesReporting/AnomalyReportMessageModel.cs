@@ -13,9 +13,9 @@ public class AnomalyReportMessageModel
 
     public string GetFormattedMessage()
     {
-        string anomalyRoomLocalizationKey = GetLocalizedValue("AnomalyLocations", AnomalyReportData.GetAnomalyRoom()?.GetLocalizationKey());
-        string anomalyTypeLocalizationKey = GetLocalizedValue("AnomalyTypes", AnomalyReportData.GetAnomalyData()?.LocalizationKey);
-        string anomalyObjectLocalizationKey = GetLocalizedValue("AnomalyObjects", AnomalyReportData.GetAnomalyObject()?.GetLocalizationKey());
+        string anomalyRoomLocalizationKey = GetLocalizedValue("AnomalyRooms", AnomalyReportData.GetAnomalyRoom()?.AnomalyRoomConfig.LocalizationKey);
+        string anomalyTypeLocalizationKey = GetLocalizedValue("AnomalyTypes", AnomalyReportData.GetAnomalyData()?.AnomalyConfig.LocalizationKey);
+        string anomalyObjectLocalizationKey = GetLocalizedValue("AnomalyObjects", AnomalyReportData.GetAnomalyObject()?.AnomalyObjectConfig.LocalizationKey);
         string defaultLocalizedTextLocalizationKey = defaultLocalizedText.GetLocalizedString();
 
         string anomalyRoomLocalizationString = anomalyRoomLocalizationKey ?? defaultLocalizedTextLocalizationKey;

@@ -51,7 +51,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c9c4c458432d05f4ba4cfb139776bba6
-    m_Address: Assets/Resources/Localization/Levels/AnomalyLocations/AnomalyLocations
+    m_Address: Assets/Resources/Localization/Levels/AnomalyLocations/AnomalyRooms
       Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
