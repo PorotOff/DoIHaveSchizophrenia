@@ -26,6 +26,10 @@ MonoBehaviour:
     m_Localized: Turning of the light
     m_Metadata:
       m_Items: []
+  - m_Id: 10090390312722432
+    m_Localized: Object movement
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

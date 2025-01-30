@@ -23,6 +23,10 @@ MonoBehaviour:
     m_Key: TurningOfLight
     m_Metadata:
       m_Items: []
+  - m_Id: 10090390312722432
+    m_Key: ObjectMovement
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

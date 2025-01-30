@@ -16,3 +16,4 @@ MonoBehaviour:
   <LocalizationKey>k__BackingField: TallChair
   <AnomalyConfigs>k__BackingField:
   - {fileID: 11400000, guid: 2ab0962d18901994e9e4e01a01f85613, type: 2}
+  - {fileID: 11400000, guid: 41c9482bbe7fd6743898ad8c8ac30dd9, type: 2}

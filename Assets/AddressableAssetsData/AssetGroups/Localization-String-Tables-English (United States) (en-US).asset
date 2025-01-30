@@ -33,6 +33,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c588e577c3e90e949a2c67ea1dbe9645
+    m_Address: AnomalyTypes_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: faae53291a6fc454cb9150ebf83fd1e6
     m_Address: AnomalyRooms_en-US
     m_ReadOnly: 1

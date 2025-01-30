@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c696a28d3a5944e965be405eae7126, type: 3}
   m_Name: AnomaliesSummoner
   m_EditorClassIdentifier: 
-  <minAnomalyTimeSpan>k__BackingField: 3
-  <maxAnomalyTimeSpan>k__BackingField: 3
+  <minAnomalyTimeSpan>k__BackingField: 10
+  <maxAnomalyTimeSpan>k__BackingField: 10

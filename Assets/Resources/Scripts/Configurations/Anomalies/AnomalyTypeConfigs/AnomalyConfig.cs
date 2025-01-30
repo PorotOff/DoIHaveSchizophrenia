@@ -2,7 +2,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Anomaly", menuName = "CONFIGURATIONS/Anomalies/Anomaly", order = 0)]
+[CreateAssetMenu(fileName = "Anomaly", menuName = "CONFIGURATIONS/Anomalies/AnomalyTypes/Anomaly", order = 0)]
 public class AnomalyConfig : BaseAnomalyConfig
 {
     [field: SerializeField] public MonoScript Anomaly { get; private set; }
