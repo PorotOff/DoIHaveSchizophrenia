@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 public class AnomalyStateContainerModel
 {
@@ -23,6 +24,15 @@ public class AnomalyStateContainerModel
         occurredAnomalyDatas.Remove(anomalyData);
     }
 
+    public bool HasNotOccurredAnomalyDatas()
+    {
+        return notOccurredAnomalyDatas.Count > 0;
+    }
+    public bool HasOccurredAnomalyDatas()
+    {
+        return occurredAnomalyDatas.Count > 0;
+    }
+
     public List<AnomalyData> GetNotOccurredAnomalyDatas()
     {
         return new List<AnomalyData>(notOccurredAnomalyDatas);
@@ -30,5 +40,13 @@ public class AnomalyStateContainerModel
     public List<AnomalyData> GetOccurredAnomalyDatas()
     {
         return new List<AnomalyData>(occurredAnomalyDatas);
+    }
+
+    public List<IAnomaly> GetAllAnomalies()
+    {
+        return notOccurredAnomalyDatas
+            .Concat(occurredAnomalyDatas)
+            .Select(anomalyData => anomalyData.Anomaly)
+            .ToList();
     }
 }

@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.Localization;
 
 public class FillingContainerWithAnomalyObjectButtons : FillingContainerWithButtons
@@ -21,7 +20,7 @@ public class FillingContainerWithAnomalyObjectButtons : FillingContainerWithButt
 
         foreach (var anomalyObject in anomalyRoom.GetUniqueAnomalyObjects())
         {
-            foreach (var anomaly in anomalyObject.GetAnomalies())
+            foreach (var anomaly in anomalyObject.AnomalyStateContainerModel.GetAllAnomalies())
             {
                 if (anomaly.GetType() == this.anomaly.GetType())
                 {

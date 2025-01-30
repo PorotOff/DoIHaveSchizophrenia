@@ -28,19 +28,19 @@ public class AnomalyRoom : MonoBehaviour
     {
         return new List<AnomalyObject>(allAnomalyObjects);
     }
-    public List<AnomalyObject> GetAllActiveInHierarchyAnomalyObjects()
+    public List<AnomalyObject> GetAnomalyObjectsWithNotOccuredAnomalies()
     {
-        List<AnomalyObject> activeInHierarchyAnomalyObjects = new List<AnomalyObject>();
+        List<AnomalyObject> anomalyObjects = new List<AnomalyObject>();
 
         foreach (var anomalyObject in GetAllAnomalyObjects())
         {
-            if (anomalyObject.gameObject.activeInHierarchy)
+            if (anomalyObject.AnomalyStateContainerModel.HasNotOccurredAnomalyDatas())
             {
-                activeInHierarchyAnomalyObjects.Add(anomalyObject);
+                anomalyObjects.Add(anomalyObject);
             }
         }
 
-        return activeInHierarchyAnomalyObjects;
+        return anomalyObjects;
     }
 
     public List<AnomalyObject> GetUniqueAnomalyObjects()
@@ -85,7 +85,7 @@ public class AnomalyRoom : MonoBehaviour
     {
         foreach (var anomalyObject in allAnomalyObjects)
         {
-            foreach (var anomalyData in anomalyObject.GetNotOccurredAnomalyDatas())
+            foreach (var anomalyData in anomalyObject.AnomalyStateContainerModel.GetNotOccurredAnomalyDatas())
             {
                 allAnomalyDatas.Add(anomalyData);
             }

@@ -10,10 +10,10 @@ public class AnomaliesSummoner : MonoBehaviour
 
     public void Initialize(AnomalyRoomsContainer anomalyRoomsContainer, AnomaliesSummonerConfig anomaliesSummonerConfig)
     {
-        anomaliesSummonerModel = new AnomaliesSummonerModel();
-
         this.anomalyRoomsContainer = anomalyRoomsContainer;
         this.anomaliesSummonerConfig = anomaliesSummonerConfig;
+
+        anomaliesSummonerModel = new AnomaliesSummonerModel();
     }
 
     public void StartUp()

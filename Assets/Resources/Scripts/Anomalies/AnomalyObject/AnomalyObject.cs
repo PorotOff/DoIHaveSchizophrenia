@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 using System;
 
@@ -8,12 +7,13 @@ public class AnomalyObject : MonoBehaviour
 
     public AnomalyRoom AnomalyRoom { get; private set; }
 
-    private List<AnomalyData> notOccurredAnomalyDatas = new List<AnomalyData>();
-    private List<AnomalyData> occurredAnomalyDatas = new List<AnomalyData>();
+    public AnomalyStateContainerModel AnomalyStateContainerModel { get; private set; }
 
     public void Initialise(AnomalyRoom anomalyRoom)
     {
         AnomalyRoom = anomalyRoom;
+
+        AnomalyStateContainerModel = new AnomalyStateContainerModel();
 
         AddAnomalyComponentsOnObject();
     }
@@ -22,34 +22,24 @@ public class AnomalyObject : MonoBehaviour
     {
         anomalyData.Anomaly.Occur();
 
+        AnomalyStateContainerModel.RemoveNotOccurredAnomaly(anomalyData);
+        AnomalyStateContainerModel.AddOccurredAnomaly(anomalyData);
+
         OccurredAnomaliesContainer.AddOccurredAnomalyData(new OccurredAnomalyData(AnomalyRoom, anomalyData, this));
+
+        Debug.Log($"На объекте {name}, произошла аномалия {anomalyData.Anomaly.GetType().Name}");
     }
     public void FixAnomaly(AnomalyData anomalyData)
     {
         anomalyData.Anomaly.Fix();
 
+        AnomalyStateContainerModel.RemoveOccurredAnomaly(anomalyData);
+        AnomalyStateContainerModel.AddNotOccurredAnomaly(anomalyData);
+
         OccurredAnomaliesContainer.RemoveOccurredAnomalyByData(new OccurredAnomalyData(AnomalyRoom, anomalyData, this));
+
+        Debug.Log($"На объекте {name}, починилась аномалия {anomalyData.Anomaly.GetType().Name}");
     }
-
-    #region Get data methods
-    public List<AnomalyData> GetNotOccurredAnomalyDatas()
-    {
-        return new List<AnomalyData>(notOccurredAnomalyDatas);
-    }
-
-
-    public List<IAnomaly> GetAnomalies()
-    {
-        List<IAnomaly> anomalies = new List<IAnomaly>();
-
-        foreach (var anomalyData in notOccurredAnomalyDatas)
-        {
-            anomalies.Add(anomalyData.Anomaly);
-        }
-
-        return anomalies;
-    }
-    #endregion
 
     private void AddAnomalyComponentsOnObject()
     {
@@ -59,12 +49,12 @@ public class AnomalyObject : MonoBehaviour
 
             Component newAnomalyComponent = gameObject.AddComponent(anomalyType);
 
-            SetAnomalyData(anomalyConfig, newAnomalyComponent as IAnomaly);
+            AddNotOccurredAnomaly(anomalyConfig, newAnomalyComponent as IAnomaly);
         }
     }
 
-    private void SetAnomalyData(AnomalyConfig anomalyConfig, IAnomaly anomaly)
+    private void AddNotOccurredAnomaly(AnomalyConfig anomalyConfig, IAnomaly anomaly)
     {
-        notOccurredAnomalyDatas.Add(new AnomalyData(anomalyConfig, anomaly));
+        AnomalyStateContainerModel.AddNotOccurredAnomaly(new AnomalyData(anomalyConfig, anomaly));
     }
 }
